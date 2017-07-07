@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import {rhythm} from "../utils/typography"
+import Header from "../components/common/header"
+
 
 export default class Template extends React.Component {
     static propTypes = {
@@ -27,6 +29,7 @@ export default class Template extends React.Component {
                 >
                     <div
                         style={{
+                            background: 'yellow',
                             margin: `0 auto`,
                             maxWidth: 960,
                             padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
@@ -45,8 +48,12 @@ export default class Template extends React.Component {
                         </h1>
                     </div>
                 </div>
+
+                <Header/>
+
                 <div
                     style={{
+                        background: 'red',
                         margin: `0 auto`,
                         maxWidth: 960,
                         padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
