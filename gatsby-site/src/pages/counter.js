@@ -12,7 +12,7 @@ class Counter extends React.Component {
                 <h1>Counter</h1>
                 <p>current count: 0</p>
                 <button>plus</button>
-                <button>minux</button>
+                <button>minus</button>
             </div>
         )
     }
