@@ -9,7 +9,7 @@
 ### How do I get set up? ###
 
 * Dependencies
-You will need a recent version of Node.js installed. Open a terminal windows and type ````node --version```` then ````npm --version````. Gatsby supports version of Node back to v4 and NPM to v3.
+You will need a recent version of Node.js installed. Open a terminal windows and type ````node --version```` then ````npm --version````. Gatsby supports version of Node back to v4 and NPM to v3. Once you've verified node and npm versions, navigate to the directory you cloned the repo to and run **npm install**.
 * Running a Local Development Server
 Simply open a terminal session and navigate to the top level of your local repo i.e. ````gatsby-site````. In your terminal you can start a local server via ````gatsby develop````. This a a hot reloading server, meaning you can make changes to markdown and javascript files and see them on the fly via ````localhost:8000````.
 * Running Production Ready Builds
