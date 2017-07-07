@@ -10,7 +10,7 @@ class Counter extends React.Component {
         return (
             <div>
                 <h1>Counter</h1>
-                <p>current count: 0</p>
+                <p>current count: {this.state.count}</p>
                 <button>plus</button>
                 <button>minus</button>
                 <Link to="/">Go back to the homepage</Link>
