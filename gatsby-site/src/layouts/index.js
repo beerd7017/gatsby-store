@@ -4,6 +4,7 @@ import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import {rhythm} from "../utils/typography"
 import Header from "../components/common/header"
+import Footer from "../components/common/Footer";
 
 
 export default class Template extends React.Component {
@@ -29,7 +30,6 @@ export default class Template extends React.Component {
                 >
                     <div
                         style={{
-                            background: 'yellow',
                             margin: `0 auto`,
                             maxWidth: 960,
                             padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
@@ -53,7 +53,6 @@ export default class Template extends React.Component {
 
                 <div
                     style={{
-                        background: 'red',
                         margin: `0 auto`,
                         maxWidth: 960,
                         padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
@@ -62,6 +61,7 @@ export default class Template extends React.Component {
                 >
                     {this.props.children()}
                 </div>
+                <Footer/>
             </div>
         )
     }
