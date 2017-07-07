@@ -2,7 +2,7 @@
 
 ### What is this repository for? ###
 
-* This repository was created for building a proof of concept for an E-Commerce platform built on Gatsby-Redux.
+* This repository was created for building a proof of concept for an E-Commerce site built on Gatsby-Redux.
 * Version 0.1.0
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
