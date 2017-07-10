@@ -6,7 +6,6 @@ import {rhythm} from "../utils/typography"
 import Header from "../components/common/Header"
 import Footer from "../components/common/Footer";
 
-
 export default class Template extends React.Component {
     static propTypes = {
         children: PropTypes.func,
@@ -21,7 +20,16 @@ export default class Template extends React.Component {
                         {name: "description", content: "Sample"},
                         {name: "keywords", content: "sample, something"},
                     ]}
-                />
+
+                    link={[
+                        {href: "http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800", rel:"stylesheet' type='text/css"},
+                        {/*Bootstrapp and FontAwesome css*/},
+                        {href:"http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel:"stylesheet"},
+                        {href:"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css", rel:"stylesheet"},
+
+                    ]}
+
+                        />
                 <div
                     style={{
                         background: `rebeccapurple`,
