@@ -1,6 +1,10 @@
-import React from "react";
+import React, {Component} from "react";
 
-class Header extends React.Component {
+class Header extends Component {
+    constructor(props){
+        super(props);
+    }
+
     render() {
         return (
             <header>
@@ -34,7 +38,7 @@ class Header extends React.Component {
                 </div>
             </div>
             </header>
-                )
+                );
     }
 }
 
