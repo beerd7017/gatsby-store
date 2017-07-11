@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
-
 
 class Header extends React.Component {
     render() {
@@ -37,7 +35,7 @@ class Header extends React.Component {
             </div>
             </header>
                 )
-                }
-                }
+    }
+}
 
-                export default Header
+export default Header
