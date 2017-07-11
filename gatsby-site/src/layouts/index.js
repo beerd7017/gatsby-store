@@ -4,7 +4,10 @@ import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import {rhythm} from "../utils/typography"
 import Header from "../components/common/Header"
-import Footer from "../components/common/Footer";
+import Footer from "../components/common/Footer"
+import styles from "../css/style.default.css"
+import styles2 from "../css/animate.css"
+import styles3 from "../css/custom.css"
 
 export default class Template extends React.Component {
     static propTypes = {
@@ -14,48 +17,17 @@ export default class Template extends React.Component {
     render() {
         return (
             <div>
+                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800" />
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+
                 <Helmet
                     title="Gatsby Default Starter"
                     meta={[
                         {name: "description", content: "Sample"},
                         {name: "keywords", content: "sample, something"},
                     ]}
-
-                    link={[
-                        {href: "http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800", rel:"stylesheet' type='text/css"},
-                        {/*Bootstrapp and FontAwesome css*/},
-                        {href:"http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel:"stylesheet"},
-                        {href:"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css", rel:"stylesheet"},
-
-                    ]}
-
-                        />
-                <div
-                    style={{
-                        background: `rebeccapurple`,
-                        marginBottom: rhythm(1),
-                    }}
-                >
-                    <div
-                        style={{
-                            margin: `0 auto`,
-                            maxWidth: 960,
-                            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-                        }}
-                    >
-                        <h1 style={{margin: 0}}>
-                            <Link
-                                to="/"
-                                style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                }}
-                            >
-                                Gatsby
-                            </Link>
-                        </h1>
-                    </div>
-                </div>
+                />
 
                 <Header/>
 
