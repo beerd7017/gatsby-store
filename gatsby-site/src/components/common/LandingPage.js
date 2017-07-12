@@ -23,7 +23,7 @@ class LandingPage extends Component{
                                         </p>
                                         <Link to="/store"><h1>Welcome</h1><p>to the product store.</p></Link>
 
-                                        <Link to="/page-2/">Go to page 2</Link>
+                                        <Link to="/page-2/">Read the TPS Reports</Link>
                                         <br/>
                                         <Link to="/counter/">Go to counter</Link>
                                         <br/>
@@ -32,7 +32,7 @@ class LandingPage extends Component{
                                         <Link to="/store">Go to the store!</Link>
                                     </div>
                                     <div className="col-sm-7">
-                                        <img className="img-responsive" src="http://placehold.it/700x500" alt=""/>
+                                        <img className="img-responsive" src="https://media.makeameme.org/created/Ummm-yeah-Hows.jpg" alt=""/>
                                     </div>
                                 </div>
                             </div>
