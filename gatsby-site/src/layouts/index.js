@@ -1,12 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import {rhythm} from "../utils/typography"
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import "../css/style.default.css"
-import "../css/animate.css"
-import "../css/custom.css"
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import {rhythm} from "../utils/typography";
+import Header from "../components/common/Header";
+import Footer from "../components/common/Footer";
+import "../css/style.default.css";
+import "../css/animate.css";
+import "../css/custom.css";
 
 export default class Template extends React.Component {
     static propTypes = {
@@ -42,6 +42,6 @@ export default class Template extends React.Component {
                 </div>
                 <Footer/>
             </div>
-        )
+        );
     }
 }
