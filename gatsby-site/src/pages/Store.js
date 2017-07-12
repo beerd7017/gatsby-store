@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Breadcrumb from "../components/common/Breadcrumb"
+import TopNavigator from "../components/common/TopNavigator";
+import Breadcrumb from "../components/common/Breadcrumb";
 import SideNavigator from "../components/catalog/SideNavigator";
 import ProductList from "../components/product/ProductList";
 
@@ -13,7 +14,8 @@ export default class Store extends React.Component {
     render() {
         return (
             <div>
-            <Breadcrumb/>
+                <TopNavigator/>
+                <Breadcrumb/>
 
                 <div id="content">
                     <div className="container">
