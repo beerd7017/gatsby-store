@@ -27,7 +27,7 @@ class ProductApi {
                     {
                         name: "Drinkwell\u00A9 Outdoor Pet Dog Fountain",
                         sku: "DDOG-INOUT",
-                        price: "",
+                        price: "$124.99",
                         image: "http://placehold.it/500x500",
                         description: "Durable bowl reduces spills. 3.5 gal. filtered water."
                     }
