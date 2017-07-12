@@ -30,7 +30,7 @@ class Footer extends React.Component {
                             <div className="item same-height-row clearfix">
                                 <div className="image same-height-always">
                                     <a href="#">
-                                        <img className="img-responsive" src="img/detailsquare.jpg" alt=""/>
+                                        <img className="img-responsive" src="http://placehold.it/500x500" alt=""/>
                                     </a>
                                 </div>
                                 <div className="name same-height-always">
@@ -41,7 +41,7 @@ class Footer extends React.Component {
                             <div className="item same-height-row clearfix">
                                 <div className="image same-height-always">
                                     <a href="#">
-                                        <img className="img-responsive" src="img/detailsquare.jpg" alt=""/>
+                                        <img className="img-responsive" src="http://placehold.it/500x500" alt=""/>
                                     </a>
                                 </div>
                                 <div className="name same-height-always">
@@ -52,7 +52,7 @@ class Footer extends React.Component {
                             <div className="item same-height-row clearfix">
                                 <div className="image same-height-always">
                                     <a href="#">
-                                        <img className="img-responsive" src="img/detailsquare.jpg" alt=""/>
+                                        <img className="img-responsive" src="http://placehold.it/500x500" alt=""/>
                                     </a>
                                 </div>
                                 <div className="name same-height-always">
@@ -86,32 +86,32 @@ class Footer extends React.Component {
                         <div className="photostream">
                             <div>
                                 <a href="#">
-                                    <img src="img/detailsquare.jpg" className="img-responsive" alt="#"/>
+                                    <img src="https://www.fillmurray.com/g/500/500" className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="img/detailsquare2.jpg" className="img-responsive" alt="#"/>
+                                    <img src="http://placecage.com/g/500/500" className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="img/detailsquare3.jpg" className="img-responsive" alt="#"/>
+                                    <img src="https://www.fillmurray.com/g/500/500" className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="img/detailsquare3.jpg" className="img-responsive" alt="#"/>
+                                    <img src="http://placecage.com/g/500/500" className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="img/detailsquare2.jpg" className="img-responsive" alt="#"/>
+                                    <img src="https://www.fillmurray.com/g/500/500" className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="img/detailsquare.jpg" className="img-responsive" alt="#"/>
+                                    <img src="http://placecage.com/g/500/500" className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                         </div>
