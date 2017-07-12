@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import Breadcrumb from "../components/common/Breadcrumb"
 import SideNavigator from "../components/catalog/SideNavigator";
 import ProductList from "../components/product/ProductList";
+
 
 export default class Store extends React.Component {
     static propTypes = {
@@ -11,6 +12,9 @@ export default class Store extends React.Component {
 
     render() {
         return (
+            <div>
+            <Breadcrumb/>
+
                 <div id="content">
                     <div className="container">
                         <div className="row">
@@ -23,6 +27,7 @@ export default class Store extends React.Component {
                         </div>
                     </div>
                 </div>
+            </div>
         );
     }
 }
