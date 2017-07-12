@@ -1,13 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import {rhythm} from "../utils/typography"
 import Header from "../components/common/Header"
 import Footer from "../components/common/Footer"
-import styles from "../css/style.default.css"
-import styles2 from "../css/animate.css"
-import styles3 from "../css/custom.css"
+import "../css/style.default.css"
+import "../css/animate.css"
+import "../css/custom.css"
 
 export default class Template extends React.Component {
     static propTypes = {
