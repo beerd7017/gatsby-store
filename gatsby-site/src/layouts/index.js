@@ -30,20 +30,9 @@ export default class Template extends React.Component {
                 />
 
                 <Header/>
-
-                <div id="content">
-                    <div className="container">
-                        <div className="row">
-                            <SideNavigator/>
-
                             <div>
                                 {this.props.children()}
                             </div>
-
-                        </div>
-                    </div>
-                </div>
-
                 <Footer/>
             </div>
         );

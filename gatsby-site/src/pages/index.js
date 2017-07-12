@@ -13,6 +13,8 @@ export default class Index extends React.Component {
                 <Link to="/counter/">Go to counter</Link>
                 <br/>
                 <Link to="/reduxExample">Go to Redux Example page</Link>
+                <br/>
+                <Link to="/store">Go to the store!</Link>
             </div>
         );
     }
