@@ -5,6 +5,7 @@ class Header extends Component {
     constructor(props){
         super(props);
     }
+
     render() {
         return (
             <div>
@@ -46,4 +47,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default Header;
