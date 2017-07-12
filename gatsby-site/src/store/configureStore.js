@@ -1,11 +1,11 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux';
-import {thingsReducer} from "../redux_modules/ThingsModule";
+import {catalogReducer} from "../redux_modules/CatalogModule";
 import thunk from "redux-thunk";
 
 
 export default function configureStore(initialState) {
     const rootReducer = combineReducers({
-        things: thingsReducer
+        catalogs: catalogReducer
     });
     const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
     return store;

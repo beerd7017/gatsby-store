@@ -1,4 +1,7 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import {catalogActions} from "../../redux_modules/CatalogModule";
+import NavigationItem from "./NavigationItem";
 
 
 class SideNavigator extends React.Component {
@@ -6,7 +9,9 @@ class SideNavigator extends React.Component {
         super(props);
     }
 
-
+    componentDidMount(){
+        this.props.getCatalogs();
+    }
 
     render() {
         return (
@@ -16,34 +21,11 @@ class SideNavigator extends React.Component {
                         <h3 className="panel-title">Categories</h3>
                     </div>
                     <div className="panel-body">
-                        <ul className="nav nav-pills nav-stacked category-menu" id="menu">
-                            <li>
-                                <a href="#">Doors<span className="badge pull-right">14</span></a>
-                            </li>
-                            <ul>
-                                <li><a href="#">Small Dog</a></li>
-                                <li><a href="#">Big Dog</a></li>
-                            </ul>
-
-
-
-
-
-                            <li>
-                                <a href="#">Clothes<span className="badge pull-right">14</span></a>
-                            </li>
-                            <ul>
-                                <li><a href="#">Small Dog</a></li>
-                                <li><a href="#">Big Dog</a></li>
-                            </ul>
-                            <li>
-                                <a href="#">Feeders<span className="badge pull-right">14</span></a>
-                            </li>
-                            <ul>
-                                <li><a href="#">Small Dog</a></li>
-                                <li><a href="#">Big Dog</a></li>
-                            </ul>
-                        </ul>
+                        {
+                            this.props.catalogs.map(catalog => {
+                              return <NavigationItem key={catalog.name} catalog={catalog}/>
+                            })
+                        }
                     </div>
                 </div>
             </div>
@@ -51,4 +33,19 @@ class SideNavigator extends React.Component {
     }
 }
 
-export default SideNavigator;
+
+function mapStateToProps(state) {
+    return {
+        catalogs: state.catalogs
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        getCatalogs: () => {
+            dispatch(catalogActions.getCatalogs());
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideNavigator);

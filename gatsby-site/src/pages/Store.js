@@ -6,12 +6,13 @@ import SideNavigator from "../components/catalog/SideNavigator";
 import ProductList from "../components/product/ProductList";
 
 
-export default class Store extends React.Component {
+class Store extends React.Component {
     static propTypes = {
         children: PropTypes.func,
     }
 
     render() {
+
         return (
             <div>
                 <TopNavigator/>
@@ -33,3 +34,5 @@ export default class Store extends React.Component {
         );
     }
 }
+
+export default Store;

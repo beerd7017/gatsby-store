@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {thingsActions} from "../redux_modules/ThingsModule";
+import {catalogActions} from "../redux_modules/CatalogModule";
 import ReduxExample from "../components/ReduxExample";
 
 function mapStateToProps(state){
