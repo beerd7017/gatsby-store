@@ -1,6 +1,6 @@
 class ProductApi {
 
-    static getProducts() {
+    static getProduct() {
         var mockApiCall = new Promise((resolve, reject) => {
             setTimeout(function () {
                 resolve([{
