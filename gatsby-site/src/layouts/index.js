@@ -17,9 +17,9 @@ export default class Template extends React.Component {
     render() {
         return (
             <div>
-                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800" />
-                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800"/>
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
 
                 <Helmet
                     title="Gatsby Default Starter"
@@ -31,18 +31,19 @@ export default class Template extends React.Component {
 
                 <Header/>
 
-                <SideNavigator/>
+                <div id="content">
+                    <div className="container">
+                        <div className="row">
+                            <SideNavigator/>
 
-                <div
-                    style={{
-                        margin: `0 auto`,
-                        maxWidth: 960,
-                        padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-                        paddingTop: 0,
-                    }}
-                >
-                    {this.props.children()}
+                            <div>
+                                {this.props.children()}
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
                 <Footer/>
             </div>
         );
