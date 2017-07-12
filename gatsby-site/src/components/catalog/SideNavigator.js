@@ -1,9 +1,11 @@
 import React, {Component} from "react";
 
+
 class SideNavigator extends React.Component {
     constructor(props) {
         super(props);
     }
+
 
 
     render() {
@@ -14,7 +16,32 @@ class SideNavigator extends React.Component {
                         <h3 className="panel-title">Categories</h3>
                     </div>
                     <div className="panel-body">
-                        <ul className="nav nav-pills nav-stacked category-menu">
+                        <ul className="nav nav-pills nav-stacked category-menu" id="menu">
+                            <li>
+                                <a href="#">Doors<span className="badge pull-right">14</span></a>
+                            </li>
+                            <ul>
+                                <li><a href="#">Small Dog</a></li>
+                                <li><a href="#">Big Dog</a></li>
+                            </ul>
+
+
+
+
+                            <li>
+                                <a href="#">Clothes<span className="badge pull-right">14</span></a>
+                            </li>
+                            <ul>
+                                <li><a href="#">Small Dog</a></li>
+                                <li><a href="#">Big Dog</a></li>
+                            </ul>
+                            <li>
+                                <a href="#">Feeders<span className="badge pull-right">14</span></a>
+                            </li>
+                            <ul>
+                                <li><a href="#">Small Dog</a></li>
+                                <li><a href="#">Big Dog</a></li>
+                            </ul>
                             <li>
                                 <a href="#">Fountains<span className="badge pull-right">14</span></a>
                             </li>
@@ -22,6 +49,31 @@ class SideNavigator extends React.Component {
                                 <li><a href="#">Small Dog</a></li>
                                 <li><a href="#">Big Dog</a></li>
                             </ul>
+                            <li>
+                                <a href="#">Harnesses/Leashes<span className="badge pull-right">14</span></a>
+                            </li>
+                            <ul>
+                                <li><a href="#">Small Dog</a></li>
+                                <li><a href="#">Big Dog</a></li>
+                            </ul>
+                            <li>
+                                <a href="#">Pet Tech<span className="badge pull-right">14</span></a>
+                            </li>
+                            <ul>
+                                <li><a href="#">Small Dog</a></li>
+                                <li><a href="#">Big Dog</a></li>
+                            </ul>
+                            <li>
+                                <a href="#">Toys<span className="badge pull-right">14</span></a>
+                            </li>
+                            <ul>
+                                <li><a href="#">Small Dog</a></li>
+                                <li><a href="#">Big Dog</a></li>
+                            </ul>
+
+
+
+
                         </ul>
                     </div>
                 </div>
