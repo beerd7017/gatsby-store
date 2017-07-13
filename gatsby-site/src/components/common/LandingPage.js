@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Link from "gatsby-link";
+import logo from "../../img/logo.png";
 
 class LandingPage extends Component{
     constructor(props){
@@ -19,7 +20,7 @@ class LandingPage extends Component{
                                 <div className="row">
                                     <div className="col-sm-5 right">
                                         <p>
-                                            <img src="http://placehold.it/187x42" alt=""/>
+                                            <img src={logo} alt=""/>
                                         </p>
                                         <Link to="/store"><h1>Welcome</h1><p>to the product store.</p></Link>
 
