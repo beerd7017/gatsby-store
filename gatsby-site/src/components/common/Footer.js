@@ -1,8 +1,15 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import {corporateActions} from "../../redux_modules/CorporateModule";
+import AboutBlurp from "./about/AboutBlurp";
 
 class Footer extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        this.props.getAbout();
     }
 
     render() {
@@ -10,21 +17,24 @@ class Footer extends React.Component {
             <footer id="footer">
                 <div className="container">
                     <div className="col-md-3 col-sm-6">
-                        <h4>About us</h4>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                            egestas.</p>
-                        <hr className="hidden-md hidden-lg hidden-sm" />
-                            <h4>Join our monthly newsletter</h4>
-                            <form>
-                                <div className="input-group">
-                                    <input type="text" className="form-control"/>
-                                    <span className="input-group-btn">
+                        <h4>About Us</h4>
+                        {
+                            this.props.about.map(about => {
+                                return <AboutBlurp key={about.quotation} about={about}/>
+                            })
+                        }
+                        <hr className="hidden-md hidden-lg hidden-sm"/>
+                        <h4>Join our monthly newsletter</h4>
+                        <form>
+                            <div className="input-group">
+                                <input type="text" className="form-control"/>
+                                <span className="input-group-btn">
                                         <button className="btn btn-default" type="button">
                                             <i className="fa fa-send"/>
                                         </button>
                                     </span>
-                                </div>
-                            </form>
+                            </div>
+                        </form>
 
                     </div>
 
@@ -65,7 +75,7 @@ class Footer extends React.Component {
                             </div>
                         </div>
 
-                        <hr className="hidden-md hidden-lg" />
+                        <hr className="hidden-md hidden-lg"/>
                     </div>
 
                     <div className="col-md-3 col-sm-6">
@@ -81,7 +91,7 @@ class Footer extends React.Component {
                         </p>
 
                         <a href="contact.html" className="btn btn-small btn-template-main">Go to contact page</a>
-                        <hr className="hidden-md hidden-lg hidden-sm" />
+                        <hr className="hidden-md hidden-lg hidden-sm"/>
                     </div>
 
                     <div className="col-md-3 col-sm-6">
@@ -126,4 +136,30 @@ class Footer extends React.Component {
     }
 }
 
-export default Footer;
+function mapStateToProps(state) {
+    return {
+        about: state.about,
+        address: state.address,
+        phone: state.phone,
+        email: state.email
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        getAbout: () => {
+            dispatch(corporateActions.getAbout());
+        },
+        getAddress: () => {
+            dispatch(corporateActions.getAddress());
+        },
+        getPhoneNum: () => {
+            dispatch(corporateActions.getPhoneNum());
+        },
+        getEmailAddr: () => {
+            dispatch(corporateActions.getEmailAddr());
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);
