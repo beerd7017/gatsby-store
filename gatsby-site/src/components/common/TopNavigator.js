@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import logo from "../../img/Logo-RSC.jpg";
+import logo from "../../img/logo.jpg";
 
 class TopNavigator extends Component {
     constructor(props) {
