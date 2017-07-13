@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import logo from "../../img/Logo-RSC.jpg";
 
 class TopNavigator extends Component {
     constructor(props) {
@@ -12,8 +13,8 @@ class TopNavigator extends Component {
                     <div className="container">
                         <div className="navbar-header">
                             <a className="navbar-brand home" href="index.html">
-                                <img src="http://placehold.it/187x42" alt="RSC logo" className="hidden-xs hidden-sm"/>
-                                <img src="http://placehold.it/187x42" alt="RSC logo" className="visible-xs visible-sm"/><span
+                                <img src={logo} alt="RSC logo" className="hidden-xs hidden-sm"/>
+                                <img src={logo} alt="RSC logo" className="visible-xs visible-sm"/><span
                                 className="sr-only">RSC - go to homepage</span>
                             </a>
                             <div className="navbar-buttons">
