@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Link from "gatsby-link";
 import logo from "../../img/logo.png";
-import hero from "../../img/ipad-tablet-technology-touch.jpg";
+import hero from "../../img/template-homepage.png";
 
 class LandingPage extends Component{
     constructor(props){
