@@ -8,7 +8,7 @@ class AboutBlurp extends Component {
     render() {
         let about = this.props.about;
         return (
-            <p>{about.quotation}</p>
+            <p>{about.quotation} {about.speaker}</p>
         );
     }
 }
