@@ -2,15 +2,19 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {corporateActions} from "../../redux_modules/CorporateModule";
 import AboutSection from "./corporate/About";
+import Address from "./corporate/Address";
 
 class Footer extends React.Component {
     constructor(props) {
         super(props);
     }
 
+
     componentDidMount() {
         this.props.getAbout();
+        this.props.getAddress();
     }
+
 
     render() {
         return (
@@ -82,13 +86,11 @@ class Footer extends React.Component {
 
                         <h4>Contact</h4>
 
-                        <p><strong>Universal Ltd.</strong>
-                            <br />13/25 New Avenue
-                            <br />Newtown upon River
-                            <br />45Y 73J
-                            <br />England
-                            <br /><strong>Great Britain</strong>
-                        </p>
+                        {
+                            this.props.address.map(address => {
+                                return <Address key={address.addressee} address={address}/>
+                            })
+                        }
 
                         <a href="contact.html" className="btn btn-small btn-template-main">Go to contact page</a>
                         <hr className="hidden-md hidden-lg hidden-sm"/>
@@ -138,10 +140,10 @@ class Footer extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        about: state.about,
-        address: state.address,
-        phone: state.phone,
-        email: state.email
+        about: state.corporate.about,
+        address: state.corporate.address,
+        phone: state.corporate.phone,
+        email: state.corporate.email
     }
 }
 

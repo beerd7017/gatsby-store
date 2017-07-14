@@ -9,10 +9,7 @@ export default function configureStore(initialState) {
     const rootReducer = combineReducers({
         catalogs: catalogReducer,
         products: productReducer,
-        about: corporateReducer,
-        address: corporateReducer,
-        phone: corporateReducer,
-        email: corporateReducer
+        corporate: corporateReducer
     });
     const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
     return store;

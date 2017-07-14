@@ -4,7 +4,6 @@ class CorporateApi {
         var mockApiCall = new Promise((resolve, reject) => {
             setTimeout(function () {
                 resolve([{
-                    id: 1,
                     quotation: "Our legacy can be that of an organization that gives back to future associates, to pet welfare, and the community for decades to come. We are passing on a foundation that will last.",
                     speaker: "-Randy Boyd, Owner and founder of Radio Systems Corporation"
                 }]);
@@ -19,7 +18,7 @@ class CorporateApi {
             setTimeout(function () {
                 resolve([{
                     addressee: "Radio Systems Corporation",
-                    addrLine1: "10247 PetSafe Way",
+                    addrLine1: "10427 PetSafe Way",
                     addrLine2: "",
                     city: "Knoxville",
                     state: "TN",

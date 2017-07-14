@@ -1,7 +1,7 @@
 import CorporateApi from "../api/corporate/CorporateApi"
 import createReducer from "../utils/createReducer"
 
-const initialState = [];
+const initialState = {about:[], address:[], phone:[], email:[]};
 
 const corporateActionTypes = {
     ABOUT_RECEIVED: "ABOUT_RECEIVED",
@@ -57,17 +57,25 @@ const corporateActions = {
 };
 
 const corporateActionsHandler = {
-    [corporateActionTypes.ABOUT_RECEIVED](state, action){
-        return action.about;
+    [   corporateActionTypes.ABOUT_RECEIVED](state, action){
+        let newState = Object.assign({}, state);
+        newState.about=action.about;
+        return newState;
     },
     [corporateActionTypes.ADDRESS_RECEIVED](state, action){
-        return action.address;
+        let newState = Object.assign({}, state);
+        newState.address=action.address;
+        return newState;
     },
     [corporateActionTypes.PHONENUM_RECEIVED](state, action){
-        return action.phone;
+        let newState = Object.assign({}, state);
+        newState.phone=action.phone;
+        return newState;
     },
     [corporateActionTypes.EMAILADDR_RECEIVED](state, action){
-        return action.email;
+        let newState = Object.assign({}, state);
+        newState.email=action.email;
+        return newState;
     }
 };
 
