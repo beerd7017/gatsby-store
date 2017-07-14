@@ -8,8 +8,11 @@ class Address extends Component{
     render() {
         let address = this.props.address;
         return (
-        <p><strong>{address.addressee}</strong></p>
-
+        <p><strong>{address.addressee}</strong>
+            <br />{address.addrLine1}
+            <br />{address.city}, {address.state}
+            <br /><strong>{address.country}</strong>
+        </p>
         );
     }
 }
