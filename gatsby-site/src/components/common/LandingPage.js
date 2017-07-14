@@ -1,13 +1,12 @@
 import React, {Component} from "react";
 import Link from "gatsby-link";
 import logo from "../../img/logo.png";
+import hero from "../../img/ipad-tablet-technology-touch.jpg";
 
 class LandingPage extends Component{
     constructor(props){
         super(props);
     }
-
-
 
     render() {
         return(
@@ -33,7 +32,7 @@ class LandingPage extends Component{
                                         <Link to="/store">Go to the store!</Link>
                                     </div>
                                     <div className="col-sm-7">
-                                        <img className="img-responsive" src="https://media.makeameme.org/created/Ummm-yeah-Hows.jpg" alt=""/>
+                                        <img className="img-responsive" src={hero} alt=""/>
                                     </div>
                                 </div>
                             </div>
