@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {corporateActions} from "../../redux_modules/CorporateModule";
-import AboutBlurp from "./about/AboutBlurp";
+import AboutSection from "./corporate/About";
 
 class Footer extends React.Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class Footer extends React.Component {
                         <h4>About Us</h4>
                         {
                             this.props.about.map(about => {
-                                return <AboutBlurp key={about.quotation} about={about}/>
+                                return <AboutSection key={about.quotation} about={about}/>
                             })
                         }
                         <hr className="hidden-md hidden-lg hidden-sm"/>
