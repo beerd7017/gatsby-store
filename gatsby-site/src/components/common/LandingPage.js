@@ -25,13 +25,13 @@ class LandingPage extends Component{
                             <div className="navbar-collapse collapse" id="navigation">
                                 <ul className="nav navbar-nav navbar-right">
                                     <li className="dropdown use-yamm yamm-fw">
-                                        <Link to="/page-2/">Brands</Link>
+                                        <Link to="/brands/">Brands</Link>
                                     </li>
                                     <li className="dropdown use-yamm yamm-fw">
-                                        <Link to="/page-2/">About Us</Link>
+                                        <Link to="/about/">About Us</Link>
                                     </li>
                                     <li className="dropdown use-yamm yamm-fw">
-                                        <Link to="/page-2/">Partners</Link>
+                                        <Link to="/partners/">Partners</Link>
                                     </li>
 
                                 </ul>
