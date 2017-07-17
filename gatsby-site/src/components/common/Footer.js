@@ -143,8 +143,6 @@ function mapStateToProps(state) {
     return {
         about: state.corporate.about,
         address: state.corporate.address,
-        phone: state.corporate.phone,
-        email: state.corporate.email
     }
 }
 
@@ -155,12 +153,6 @@ function mapDispatchToProps(dispatch) {
         },
         getAddress: () => {
             dispatch(corporateActions.getAddress());
-        },
-        getPhoneNum: () => {
-            dispatch(corporateActions.getContact());
-        },
-        getEmailAddr: () => {
-            dispatch(corporateActions.getEmailAddr());
         }
     }
 }
