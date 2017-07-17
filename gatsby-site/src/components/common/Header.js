@@ -1,10 +1,18 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import {corporateActions} from "../../redux_modules/CorporateModule";
 import LoginModal from "./authentication/LoginModal";
+import ContactSection from "./corporate/ContactSection";
 
 class Header extends Component {
     constructor(props){
         super(props);
     }
+
+    componentDidMount() {
+        this.props.getContact();
+    }
+
 
     render() {
         return (
@@ -14,8 +22,12 @@ class Header extends Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-xs-5 contact">
-                                    <p className="hidden-sm hidden-xs">Contact us on +420 777 555 333 or
-                                        hello@rsccorp.radiosys.com.</p>
+                                    {
+                                        this.props.contact.map(contact => {
+                                            return <ContactSection key={contact.phone} contact={contact}/>
+                                        })
+                                    }
+
                                     <p className="hidden-md hidden-lg">
                                         <a href="#" data-animate-hover="pulse"><i className="fa fa-phone"/></a>
                                         <a href="#" data-animate-hover="pulse"><i className="fa fa-envelope"/></a>
@@ -47,4 +59,19 @@ class Header extends Component {
     }
 }
 
-export default Header;
+function mapStateToProps(state) {
+    return {
+        contact: state.corporate.contact
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        getContact: () => {
+            dispatch(corporateActions.getContact());
+        }
+    }
+}
+
+
+export default connect (mapStateToProps, mapDispatchToProps)(Header);

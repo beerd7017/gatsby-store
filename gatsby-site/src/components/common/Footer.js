@@ -157,7 +157,7 @@ function mapDispatchToProps(dispatch) {
             dispatch(corporateActions.getAddress());
         },
         getPhoneNum: () => {
-            dispatch(corporateActions.getPhoneNum());
+            dispatch(corporateActions.getContact());
         },
         getEmailAddr: () => {
             dispatch(corporateActions.getEmailAddr());

@@ -30,11 +30,12 @@ class CorporateApi {
     }
 
 
-    static getPhone() {
+    static getContact() {
         var mockApiCall = new Promise((resolve, reject) => {
             setTimeout(function () {
                 resolve([{
-                    phone: "+420 777 555 333"
+                    phone: "+420 777 555 333",
+                    emailAddress: "info@rsccorp.radiosys.com"
                 }]);
             }, 1000);
         });
@@ -46,7 +47,7 @@ class CorporateApi {
         var mockApiCall = new Promise((resolve, reject) => {
             setTimeout(function () {
                 resolve([{
-                    emailAddress: "info@rsccorp.radiosys.com"
+
                 }]);
             }, 1000);
         });

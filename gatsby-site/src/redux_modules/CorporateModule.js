@@ -1,13 +1,12 @@
 import CorporateApi from "../api/corporate/CorporateApi"
 import createReducer from "../utils/createReducer"
 
-const initialState = {about:[], address:[], phone:[], email:[]};
+const initialState = {about:[], address:[], contact:[]};
 
 const corporateActionTypes = {
     ABOUT_RECEIVED: "ABOUT_RECEIVED",
     ADDRESS_RECEIVED: "ADDRESS_RECEIVED",
-    PHONENUM_RECEIVED: "PHONENUM_RECEIVED",
-    EMAILADDR_RECEIVED: "EMAILADDR_RECEIVED"
+    CONTACT_RECEIVED: "CONTACT_RECEIVED"
 };
 
 const corporateActions = {
@@ -33,26 +32,15 @@ const corporateActions = {
         return {type: corporateActionTypes.ADDRESS_RECEIVED, address};
     },
 
-    getPhoneNum: () => {
+    getContact: () => {
         return (dispatch) => {
-            return CorporateApi.getPhone().then(phone => {
-                dispatch(corporateActions.phoneReceived(phone));
+            return CorporateApi.getContact().then(contact => {
+                dispatch(corporateActions.contactReceived(contact));
             });
         }
     },
-    phoneReceived: (phone) => {
-        return {type: corporateActionTypes.PHONENUM_RECEIVED, phone};
-    },
-
-    getEmailAddr: () => {
-        return (dispatch) => {
-            return CorporateApi.getEmail().then(email => {
-                dispatch(corporateActions.emailAddrReceived(email));
-            });
-        }
-    },
-    emailAddrReceived: (email) => {
-        return {type: corporateActionTypes.EMAILADDR_RECEIVED, email};
+    contactReceived: (contact) => {
+        return {type: corporateActionTypes.CONTACT_RECEIVED, contact};
     }
 };
 
@@ -67,14 +55,9 @@ const corporateActionsHandler = {
         newState.address=action.address;
         return newState;
     },
-    [corporateActionTypes.PHONENUM_RECEIVED](state, action){
+    [corporateActionTypes.CONTACT_RECEIVED](state, action){
         let newState = Object.assign({}, state);
-        newState.phone=action.phone;
-        return newState;
-    },
-    [corporateActionTypes.EMAILADDR_RECEIVED](state, action){
-        let newState = Object.assign({}, state);
-        newState.email=action.email;
+        newState.contact=action.contact;
         return newState;
     }
 };
