@@ -11,6 +11,37 @@ class LandingPage extends Component{
     render() {
         return(
             <section>
+                <div className="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+                    <div className="navbar navbar-default yamm" role="navigation" id="navbar">
+                        <div className="container">
+                            <div className="navbar-header">
+                                <a className="navbar-brand home" href="index.html">
+                                    <img src={logo} alt="RSC logo" className="hidden-xs hidden-sm"/>
+                                    <img src={logo} alt="RSC logo" className="visible-xs visible-sm"/><span
+                                    className="sr-only">RSC - go to homepage</span>
+                                </a>
+
+                            </div>
+                            <div className="navbar-collapse collapse" id="navigation">
+                                <ul className="nav navbar-nav navbar-right">
+                                    <li className="dropdown use-yamm yamm-fw">
+                                        <Link to="/page-2/">Brands</Link>
+                                    </li>
+                                    <li className="dropdown use-yamm yamm-fw">
+                                        <Link to="/page-2/">About Us</Link>
+                                    </li>
+                                    <li className="dropdown use-yamm yamm-fw">
+                                        <Link to="/page-2/">Partners</Link>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div className="home-carousel">
                     <div className="dark-mask"></div>
                     <div className="container">
@@ -18,21 +49,10 @@ class LandingPage extends Component{
                             <div className="item">
                                 <div className="row">
                                     <div className="col-sm-5 right">
-                                        <p>
-                                            <img src={logo} alt=""/>
-                                        </p>
-                                        <Link to="/store"><h1>Welcome</h1><p>to the product store.</p></Link>
-
-                                        <Link to="/page-2/">Read the TPS Reports</Link>
-                                        <br/>
-                                        <Link to="/counter/">Go to counter</Link>
-                                        <br/>
-                                        <Link to="/reduxExample">Go to Redux Example page</Link>
-                                        <br/>
-                                        <Link to="/store">Go to the store!</Link>
+                                        <Link to="/store"><h1>The most trusted pet brands.</h1></Link>
                                     </div>
                                     <div className="col-sm-7">
-                                        <img className="img-responsive" src={hero} alt=""/>
+                                        <Link to="/store"><img className="img-responsive" src={hero} alt=""/></Link>
                                     </div>
                                 </div>
                             </div>
@@ -41,6 +61,7 @@ class LandingPage extends Component{
                     </div>
                 </div>
             </section>
+
         );
     }
 }

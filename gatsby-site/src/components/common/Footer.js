@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {corporateActions} from "../../redux_modules/CorporateModule";
 import AboutSection from "./corporate/About";
 import Address from "./corporate/Address";
+import photo1 from "../../img/french-bulldog-summer-smile-joy-160846.jpg";
 
 class Footer extends React.Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class Footer extends React.Component {
                             <div className="item same-height-row clearfix">
                                 <div className="image same-height-always">
                                     <a href="#">
-                                        <img className="img-responsive" src="http://placehold.it/500x500" alt=""/>
+                                        <img className="img-responsive" src={photo1} alt=""/>
                                     </a>
                                 </div>
                                 <div className="name same-height-always">
@@ -59,7 +60,7 @@ class Footer extends React.Component {
                             <div className="item same-height-row clearfix">
                                 <div className="image same-height-always">
                                     <a href="#">
-                                        <img className="img-responsive" src="http://placehold.it/500x500" alt=""/>
+                                        <img className="img-responsive" src={photo1} alt=""/>
                                     </a>
                                 </div>
                                 <div className="name same-height-always">
@@ -70,7 +71,7 @@ class Footer extends React.Component {
                             <div className="item same-height-row clearfix">
                                 <div className="image same-height-always">
                                     <a href="#">
-                                        <img className="img-responsive" src="http://placehold.it/500x500" alt=""/>
+                                        <img className="img-responsive" src={photo1} alt=""/>
                                     </a>
                                 </div>
                                 <div className="name same-height-always">
@@ -102,32 +103,32 @@ class Footer extends React.Component {
                         <div className="photostream">
                             <div>
                                 <a href="#">
-                                    <img src="https://www.fillmurray.com/g/500/500" className="img-responsive" alt="#"/>
+                                    <img src={photo1} className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="http://placecage.com/g/500/500" className="img-responsive" alt="#"/>
+                                    <img src={photo1} className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="https://www.fillmurray.com/g/500/500" className="img-responsive" alt="#"/>
+                                    <img src={photo1} className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="http://placecage.com/g/500/500" className="img-responsive" alt="#"/>
+                                    <img src={photo1} className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="https://www.fillmurray.com/g/500/500" className="img-responsive" alt="#"/>
+                                    <img src={photo1} className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="http://placecage.com/g/500/500" className="img-responsive" alt="#"/>
+                                    <img src={photo1} className="img-responsive" alt="#"/>
                                 </a>
                             </div>
                         </div>
