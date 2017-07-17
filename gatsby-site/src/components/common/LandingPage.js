@@ -40,8 +40,6 @@ class LandingPage extends Component{
                     </div>
                 </div>
 
-
-
                 <div className="home-carousel">
                     <div className="dark-mask"></div>
                     <div className="container">
