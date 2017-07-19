@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {catalogActions} from "../../redux_modules/CatalogModule";
 
-
 class NavigationItem extends Component {
     constructor(props) {
         super(props);
@@ -15,21 +14,26 @@ class NavigationItem extends Component {
 
         } else {
             //console.log("just returning some html");
-            return (<ul id="subcat" className="collapse in"><li><a href={array.url}>{array.name}</a></li></ul>);
+            return (<li><a href={array.url}>{array.name}</a></li>);
         }
     }
     render() {
         let catalog = this.props.catalog;
+        let subSection = this. props.subSections;
+
         console.log(catalog.childArray.map(this.displayName));
+
         return (
             <ul className="nav nav-pills nav-stacked category-menu" id="menu">
                 <li>
-                    <a href="#" data-toggle="collapse" data-target="#subcat">{catalog.name}<span
+                    <a href="#" data-toggle="collapse" data-target="#Doors">{catalog.name}<span
                         className="badge pull-right">{catalog.totalProducts}</span></a>
                 </li>
+                <ul id="Doors" className="collapse in">
                     {
                         catalog.childArray.map(this.displayName)
                     }
+                </ul>
             </ul>
         );
     }
