@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {catalogActions} from "../../redux_modules/CatalogModule";
 
-class NavigationItem extends Component {
+class ParentSectionItem extends Component {
     constructor(props) {
         super(props);
         this.displayName = this.displayName.bind(this);
@@ -52,4 +52,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationItem);
+export default connect(mapStateToProps, mapDispatchToProps)(ParentSectionItem);

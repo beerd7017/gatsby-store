@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {catalogActions} from "../../redux_modules/CatalogModule";
-import NavigationItem from "./NavigationItem";
+import ParentSectionItem from "./ParentSectionItem";
 
 
 class SideNavigator extends React.Component {
@@ -23,7 +23,7 @@ class SideNavigator extends React.Component {
                     <div className="panel-body">
                         {
                             this.props.catalogs.map(catalog => {
-                              return <NavigationItem key={catalog.name} catalog={catalog}/>
+                              return <ParentSectionItem key={catalog.name} catalog={catalog}/>
                             })
                         }
                     </div>
