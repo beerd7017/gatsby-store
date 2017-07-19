@@ -12,7 +12,7 @@ class TopNavigator extends Component {
                 <div className="navbar navbar-default yamm" role="navigation" id="navbar">
                     <div className="container">
                         <div className="navbar-header">
-                            <a className="navbar-brand home" href="index.html">
+                            <a className="navbar-brand home" href="/">
                                 <img src={logo} alt="RSC logo" className="hidden-xs hidden-sm"/>
                                 <img src={logo} alt="RSC logo" className="visible-xs visible-sm"/><span
                                 className="sr-only">RSC - go to homepage</span>
