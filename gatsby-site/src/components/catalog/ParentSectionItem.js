@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {catalogActions} from "../../redux_modules/CatalogModule";
 
 class ParentSectionItem extends Component {
     constructor(props) {
         super(props);
         this.displayName = this.displayName.bind(this);
     }
+
     displayName(array) {
         if (typeof(array.subcatagory) !== "undefined") {
             //console.log("calling recursively");
@@ -17,6 +17,7 @@ class ParentSectionItem extends Component {
             return (<li><a href={array.url}>{array.name}</a></li>);
         }
     }
+
     render() {
         let catalog = this.props.catalog;
 
