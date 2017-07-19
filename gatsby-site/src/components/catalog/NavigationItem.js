@@ -19,7 +19,6 @@ class NavigationItem extends Component {
     }
     render() {
         let catalog = this.props.catalog;
-        let subSection = this. props.subSections;
 
         console.log(catalog.childArray.map(this.displayName));
 
