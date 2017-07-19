@@ -17,7 +17,7 @@ class ParentSectionItem extends Component {
                 </li>
                 <ul id="#" className="collapse in">
 
-                    <li><a href="">{catalog.subSections}</a></li>
+                    <li><a href="/">{catalog.subSections}</a></li>
                 </ul>
             </ul>
         );
