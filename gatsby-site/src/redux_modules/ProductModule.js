@@ -4,7 +4,7 @@ import createReducer from "../utils/createReducer";
 const initialState = [];
 
 const productActionTypes = {
-    PRODUCTS_RECEIVED: "PRODUCTS_RECIEVED"
+    PRODUCTS_RECEIVED: "PRODUCTS_RECEIEVED"
 }
 
 const productActions = {
