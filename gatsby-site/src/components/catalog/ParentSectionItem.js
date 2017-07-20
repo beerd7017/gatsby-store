@@ -1,8 +1,12 @@
 import React, {Component} from "react";
 
-function myFunction(element) {
+function appendCatName(name) {
+    return "#" + name;
+}
 
-    return <li><a href="/">{element}</a></li>;
+function listSubsections(subSects) {
+
+    return <li><a href="/">{subSects}</a></li>;
 }
 
 class ParentSectionItem extends Component {
@@ -16,11 +20,11 @@ class ParentSectionItem extends Component {
         return (
             <ul className="nav nav-pills nav-stacked category-menu" id="menu">
                 <li>
-                    <a href="#" data-toggle="collapse" data-target="#Doors">{catalog.name}<span
+                    <a href="#" data-toggle="collapse" data-target={appendCatName(catalog.name)}>{catalog.name}<span
                         className="badge pull-right">{catalog.totalProducts}</span></a>
                 </li>
                 <ul id={catalog.name} className="collapse in">
-                    {catalog.subSections.map(myFunction)}
+                    {catalog.subSections.map(listSubsections)}
                 </ul>
             </ul>
         );
