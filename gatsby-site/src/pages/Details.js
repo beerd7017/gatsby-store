@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import TopNavigator from "../components/common/TopNavigator";
 import Breadcrumb from "../components/common/Breadcrumb";
 import SideNavigator from "../components/catalog/SideNavigator";
-
+import ProductDetail from "../components/product/ProductDetail";
 
 
 class Details extends React.Component {
@@ -17,16 +17,13 @@ class Details extends React.Component {
             <div>
                 <TopNavigator/>
                 <Breadcrumb/>
-
                 <div id="content">
                     <div className="container">
                         <div className="row">
                             <SideNavigator/>
-
                             <div>
-
+                                <ProductDetail/>
                             </div>
-
                         </div>
                     </div>
                 </div>
