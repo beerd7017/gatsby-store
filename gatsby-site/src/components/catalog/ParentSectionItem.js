@@ -20,7 +20,8 @@ class ParentSectionItem extends Component {
         return (
             <ul className="nav nav-pills nav-stacked category-menu" id="menu">
                 <li>
-                    <a href="#" data-toggle="collapse" data-target={appendCatName(catalog.sectionId)}>{catalog.name}<span
+                    <a href="#" data-toggle="collapse"
+                       data-target={appendCatName(catalog.sectionId)}>{catalog.name}<span
                         className="badge pull-right">{catalog.totalProducts}</span></a>
                 </li>
                 <ul id={catalog.sectionId} className="collapse">
