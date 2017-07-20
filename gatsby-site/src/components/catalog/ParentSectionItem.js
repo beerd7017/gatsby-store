@@ -23,7 +23,7 @@ class ParentSectionItem extends Component {
                     <a href="#" data-toggle="collapse" data-target={appendCatName(catalog.name)}>{catalog.name}<span
                         className="badge pull-right">{catalog.totalProducts}</span></a>
                 </li>
-                <ul id={catalog.name} className="collapse in">
+                <ul id={catalog.name} className="collapse">
                     {catalog.subSections.map(listSubsections)}
                 </ul>
             </ul>
