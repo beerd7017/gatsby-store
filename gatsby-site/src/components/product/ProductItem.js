@@ -14,7 +14,7 @@ class ProductItem extends Component {
                         <img src={product.image}/>
                     </div>
                     <div className="text">
-                        <h3><a href="#">{product.name}</a></h3>
+                        <h3><a href="/details">{product.name}</a></h3>
                         <p className="text-muted">{product.sku}</p>
                         <p className="price">{product.price}</p>
                         <a href="#" className="btn btn-template-main"><i className="fa fa-shopping-cart"/>Add to
@@ -24,7 +24,6 @@ class ProductItem extends Component {
             </div>
         );
     }
-
 }
 
 export default ProductItem;
