@@ -1,8 +1,15 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import {productActions} from "../../redux_modules/ProductModule";
+import Description from "./item/Description";
 
-class ProductDetail extends Component {
+class ItemDetail extends Component {
     constructor(props){
         super(props);
+    }
+
+    componentDidMount(){
+        this.props.getProducts();
     }
 
     render(){
@@ -10,9 +17,10 @@ class ProductDetail extends Component {
 
             <div className="col-md-9">
 
-                <p className="lead">Built purse maids cease her ham new seven among and. Pulled coming wooded tended it answer remain me be. So landlord by we unlocked sensible it. Fat cannot use denied excuse son law. Wisdom happen suffer common the appear ham beauty
-                    her had. Or belonging zealously existence as by resources.
-                </p>
+
+                <Description/>
+
+
                 <p className="goToDescription"><a href="#details" className="scroll-to text-uppercase">Scroll to product details, material & care and sizing</a>
                 </p>
 
@@ -93,4 +101,18 @@ class ProductDetail extends Component {
         )};
 }
 
-export default ProductDetail;
+function mapStateToProps(state){
+    return {
+        products: state.products
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        getProducts: () => {
+            dispatch(productActions.getProducts());
+        }
+    }
+}
+
+export default connect (mapStateToProps, mapDispatchToProps)(ItemDetail);
