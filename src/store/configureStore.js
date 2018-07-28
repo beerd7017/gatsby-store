@@ -1,4 +1,4 @@
-import {createStore, applyMiddleware, combineReducers} from 'redux';
+import {applyMiddleware, combineReducers, createStore} from 'redux';
 import {corporateReducer} from "../redux_modules/CorporateModule";
 import {catalogReducer} from "../redux_modules/CatalogModule";
 import {productReducer} from "../redux_modules/ProductModule";
@@ -10,6 +10,5 @@ export default function configureStore(initialState) {
         catalogs: catalogReducer,
         products: productReducer
     });
-    const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
-    return store;
+    return createStore(rootReducer, initialState, applyMiddleware(thunk));
 }

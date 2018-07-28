@@ -5,11 +5,10 @@ import Breadcrumb from "../components/common/Breadcrumb";
 import SideNavigator from "../components/catalog/SideNavigator";
 import ItemDetail from "../components/product/ItemDetail";
 
-
 class Details extends React.Component {
     static propTypes = {
         children: PropTypes.func,
-    }
+    };
 
     render() {
 

@@ -8,7 +8,7 @@ import ProductList from "../components/product/ProductList";
 class Store extends React.Component {
     static propTypes = {
         children: PropTypes.func,
-    }
+    };
 
     render() {
 
