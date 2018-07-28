@@ -4,7 +4,6 @@ import Helmet from "react-helmet";
 import {rhythm} from "../utils/typography";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-import SideNavigator from "../components/catalog/SideNavigator";
 import "../css/style.default.css";
 import "../css/animate.css";
 import "../css/custom.css";
@@ -12,7 +11,7 @@ import "../css/custom.css";
 export default class Template extends React.Component {
     static propTypes = {
         children: PropTypes.func,
-    }
+    };
 
     render() {
         return (

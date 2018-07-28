@@ -1,63 +1,37 @@
 class CatalogApi {
 
     static getCatalog() {
-        var mockApiCall = new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(function () {
                 resolve([{
-                    name: "Doors",
+                    name: "Guitars",
                     sectionId: 1,
-                    totalProducts: "11",
-                    subSections: ["Standard", "Electronic", "Sliding"]
+                    totalProducts: "3",
+                    subSections: ["Acoustic", "Electric"]
                 }, {
-                    name: "Clothes",
+                    name: "Mandolins",
                     sectionId: 2,
-                    totalProducts: "8",
-                    subSections: ["Small Dog", "Large Dog"]
+                    totalProducts: "4",
+                    subSections: ["A Style", "F Style", "B Style"]
                 }, {
-                    name: "Feeders",
+                    name: "Banjos",
                     sectionId: 3,
-                    totalProducts: "12",
-                    subSections: ["All"]
+                    totalProducts: "5",
+                    subSections: ["Standard" , "Tenor"]
                 }, {
-                    name: "Fountains",
+                    name: "Basses",
                     sectionId: 4,
                     totalProducts: "8",
-                    subSections: ["Indoor", "Outdoor"]
+                    subSections: ["Acoustic", "Electric"]
                 }, {
-                    name: "Harnesses/Leashes",
+                    name: "Accessories",
                     sectionId: 5,
                     totalProducts: "12",
-                    subSections: ["Standard", "Deluxe", "Sport"]
-                }, {
-                    name: "Pet Tech",
-                    sectionId: 6,
-                    totalProducts: "15",
-                    subSections: ["All"]
-                }, {
-                    name: "Toys",
-                    sectionId: 7,
-                    totalProducts: "23",
-                    subSections: ["All"]
-                }, {
-                    name: "Training",
-                    sectionId: 8,
-                    totalProducts: "13",
-                    subSections: ["All"]
-                }, {
-                    name: "Treats",
-                    sectionId: 9,
-                    totalProducts: "7",
-                    subSections: ["All"]
-                }, {
-                    name: "Waste Management",
-                    sectionId: 10,
-                    totalProducts: "14",
-                    subSections: ["All"]
+                    subSections: ["Straps", "Stands", "Maintenance"]
                 }
                 ]);
             }, 1000);
         });
-        return mockApiCall;
     }
 }
 

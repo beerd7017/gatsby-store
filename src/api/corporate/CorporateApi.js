@@ -1,57 +1,51 @@
 class CorporateApi {
 
     static getAbout() {
-        var mockApiCall = new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(function () {
                 resolve([{
-                    quotation: "Our legacy can be that of an organization that gives back to future associates, to pet welfare, and the community for decades to come. We are passing on a foundation that will last.",
-                    speaker: "-Randy Boyd, Owner and founder of Radio Systems Corporation"
+                    quotation: "Static site generators are the bees knees, for sure.",
+                    speaker: "-Dennis Stepp, Software Engineer"
                 }]);
             }, 1000);
         });
-        return mockApiCall;
     }
 
 
     static getAddress() {
-        var mockApiCall = new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(function () {
                 resolve([{
-                    addressee: "Radio Systems Corporation",
-                    addrLine1: "10427 PetSafe Way",
-                    addrLine2: "",
+                    addressee: "Gatsby-Store",
+                    addrLine1: "123 Test Ave",
+                    addrLine2: "Suite 123",
                     city: "Knoxville",
                     state: "TN",
                     country: "United States"
                 }]);
             }, 1000);
         });
-        return mockApiCall;
     }
 
 
     static getContact() {
-        var mockApiCall = new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(function () {
                 resolve([{
-                    phone: "+420 777 555 333",
-                    emailAddress: "info@rsccorp.radiosys.com"
+                    phone: "+555 555 555 555",
+                    emailAddress: "info@gatsby-store.com"
                 }]);
             }, 1000);
         });
-        return mockApiCall;
 
     }
 
     static getEmail() {
-        var mockApiCall = new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(function () {
-                resolve([{
-
-                }]);
+                resolve([{}]);
             }, 1000);
         });
-        return mockApiCall;
     }
 }
 
