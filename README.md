@@ -1,10 +1,23 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Welcome to the gatsby-store repository.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
-## Deploy
+## Purpose
+This is a proof of concept for a store front with GatsbyJS. 
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Rules of the Repository
+* Master branch is production, period.
+* Do not commit to master, please work off the development branch.
+* When working locally, try to work in feature branches.
+* Please follow GitFlow.
+* You may fork this repository freely, for personal or commercial use. It would be cool if you dropped my name in some credits, but it's not required.
+
+## Contributing
+
+1. Add your contribution to a new branch named `<username>/<feature-name>`
+2. Install the latest versions of .NET core 
+3. You can start the application from the command line with `dotnet electronize start`. Be sure to test your changes before submitting a pull request.
+4. Submit a Pull Request.
+5. Profit.
+
+## Have an Issue or Request?
+
+Submit an Issue or Request above. Please also be sure to tag the issue type.
